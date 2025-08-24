@@ -15,12 +15,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-[#f4f5f7] h-[100vh] max-w-[450px] mx-auto">
+<body class="bg-[#f4f5f7] h-[100%] max-w-[450px] mx-auto">
     <div class="flex justify-between items-center h-[80px] border-b-1 border-gray-300 p-[20px] bg-white">
         <div class="flex">
             <img src="./assets/Group.png" alt="" class="w-[50px] h-[48px]">
             <div class="ml-2">
-                <h2 class="font-semibold text-[rgba(8, 8, 8, 0.9)] font-bold">$<span>45000</span></h2>
+                <h2 class="font-semibold text-[rgba(8, 8, 8, 0.9)] font-bold">$<span id="available-balance">45000</span></h2>
                 <p class="text-[#08080880]">Available Balance</p>
             </div>
         </div>
@@ -65,8 +65,8 @@
         </div>
     </div>
     <!-- add money button form  -->
-    <div id="add-money-parent" class="max-w-[350px] h-[100vh] mx-auto">
-        <h1 class="font-semibold text-[#080808e6] text-[18px] p-[24px]">Add Money</h1>
+    <div id="add-money-parent" class="max-w-[350px] mx-auto pb-[100px]">
+        <h1 class="font-semibold text-[#080808e6] text-[18px] pt-[24px] pb-[10px]">Add Money</h1>
         <form>
             <div class="p-6 bg-white w-[350px] rounded-[24px]">
                 <label for="" class="font-medium">Select a Bank</label>
@@ -77,11 +77,11 @@
                     <option>Brac bank</option>
                 </select>
                 <label for="text" class="font-medium">Bank Account Number</label> <br>
-                <input type="text" placeholder="Enter 11 digit account number"
+                <input id="account-number" type="text" placeholder="Enter 11 digit account number"
                     class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
                 <br>
                 <label for="text" class="font-medium">Amount to Add</label> <br>
-                <input type="text" placeholder="Add Amount to withdraw"
+                <input id="add-amount" type="text" placeholder="Add Amount to withdraw"
                     class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
                 <br>
                 <label for="password" class="font-medium">4 Digit Pin</label> <br>
