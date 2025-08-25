@@ -20,7 +20,8 @@
         <div class="flex">
             <img src="./assets/Group.png" alt="" class="w-[50px] h-[48px]">
             <div class="ml-2">
-                <h2 class="font-semibold text-[rgba(8, 8, 8, 0.9)] font-bold">$<span id="available-balance">45000</span></h2>
+                <h2 class="font-semibold text-[rgba(8, 8, 8, 0.9)] font-bold">$<span id="available-balance">45000</span>
+                </h2>
                 <p class="text-[#08080880]">Available Balance</p>
             </div>
         </div>
@@ -33,39 +34,39 @@
     </div>
     <!-- all transaction button  -->
     <div class="grid grid-cols-3 gap-4 p-[24px] bg-white rounded-b-[24px]">
-        <div
-            class="w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col border-1 border-gray-300 text-center rounded-xl">
+        <div id="money-btn"
+            class="all-btn w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col border-1 border-gray-300 text-center rounded-xl cursor-pointer">
             <img src="./assets/wallet1.png" alt="" class="mx-auto">
             <p class="text-[#080808e6] mt-[8px]">Money</p>
         </div>
-        <div
-            class="w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col  border-1 border-gray-300 text-center rounded-xl">
+        <div id="cash-out-btn"
+            class="all-btn w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col  border-1 border-gray-300 text-center rounded-xl cursor-pointer">
             <img src="./assets/send1.png" alt="" class="mx-auto">
             <p class="text-[#080808e6] mt-[8px]">Cashout</p>
         </div>
-        <div
-            class="w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col  border-1 border-gray-300 text-center rounded-xl">
+        <div id="transfer-btn"
+            class="all-btn w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col  border-1 border-gray-300 text-center rounded-xl cursor-pointer">
             <img src="./assets/money1.png" alt="" class="mx-auto">
             <p class="text-[#080808e6] mt-[8px]">Transfer Money</p>
         </div>
-        <div
-            class="w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col border-1 border-gray-300 text-center rounded-xl">
+        <div id="get-bonus-btn"
+            class="all-btn w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col border-1 border-gray-300 text-center rounded-xl cursor-pointer">
             <img src="./assets/bonus1.png" alt="" class="mx-auto">
             <p class="text-[#080808e6] mt-[8px]">Get Bonus</p>
         </div>
-        <div
-            class="w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col  border-1 border-gray-300 text-center rounded-xl">
+        <div id="pay-bill-btn"
+            class="all-btn w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col  border-1 border-gray-300 text-center rounded-xl cursor-pointer">
             <img src="./assets/purse1.png" alt="" class="mx-auto">
             <p class="text-[#080808e6] mt-[8px]">Pay Bill</p>
         </div>
-        <div
-            class="w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col border-1 border-gray-300 text-center rounded-xl">
+        <div id="transaction-btn"
+            class="all-btn w-[120px] h-[90px] mx-auto flex justify-center items-center flex-col border-1 border-gray-300 text-center rounded-xl cursor-pointer">
             <img src="./assets/transaction1.png" alt="" class="mx-auto">
             <p class="text-[#080808e6] mt-[8px]">Transactions</p>
         </div>
     </div>
     <!-- add money button form  -->
-    <div id="add-money-parent" class="max-w-[350px] mx-auto pb-[100px]">
+    <div id="add-money-parent" class="form max-w-[350px] mx-auto pb-[100px]" style="display: none;">
         <h1 class="font-semibold text-[#080808e6] text-[18px] pt-[24px] pb-[10px]">Add Money</h1>
         <form>
             <div class="p-6 bg-white w-[350px] rounded-[24px]">
@@ -88,13 +89,15 @@
                 <input id="pin-number" type="password" placeholder="Enter 4 digit pin"
                     class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
                 <br>
-                <button id="add-money-btn" class="btn bg-[#0874f2] w-full mt-4 rounded-[32px] text-white">Add Money</button>
+                <button id="add-money-btn" class="btn bg-[#0874f2] w-full mt-4 rounded-[32px] text-white">Add
+                    Money</button>
             </div>
         </form>
 
     </div>
+
     <!-- Cash out button form  -->
- <div id="add-money-parent" class="max-w-[350px] mx-auto pb-[100px]">
+    <div id="cash-out-parent" class="form max-w-[350px] mx-auto pb-[100px]" style="display: none;">
         <h1 class="font-semibold text-[#080808e6] text-[18px] pt-[24px] pb-[10px]">Cash Out</h1>
         <form>
             <div class="p-6 bg-white w-[350px] rounded-[24px]">
@@ -107,14 +110,104 @@
                     class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
                 <br>
                 <label for="password" class="font-medium">Pin Number</label> <br>
-                <input id="pin-number" type="password" placeholder="Enter 4 digit pin number"
+                <input id="withdraw-pin-number" type="password" placeholder="Enter 4 digit pin number"
                     class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
                 <br>
-                <button id="withdraw-money-btn" class="btn bg-[#0874f2] w-full mt-4 rounded-[32px] text-white">Withdraw Money</button>
+                <button id="withdraw-money-btn" class="btn bg-[#0874f2] w-full mt-4 rounded-[32px] text-white">Withdraw
+                    Money</button>
             </div>
         </form>
 
     </div>
+    <!-- transfer money button form  -->
+    <div id="transfer-money-parent" class="form max-w-[350px] mx-auto pb-[100px]" style="display: none;">
+        <h1 class="font-semibold text-[#080808e6] text-[18px] pt-[24px] pb-[10px]">Transfer Money</h1>
+        <form>
+            <div class="p-6 bg-white w-[350px] rounded-[24px]">
+                <label for="text" class="font-medium">User Account Number</label> <br>
+                <input id="transfer-account-number" type="text" placeholder="Enter 11 digit number"
+                    class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
+                <br>
+                <label for="text" class="font-medium">Amount</label> <br>
+                <input id="transfer-amount" type="text" placeholder="Enter amount to transfer"
+                    class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
+                <br>
+                <label for="password" class="font-medium">Pin Number</label> <br>
+                <input id="transfer-pin-number" type="password" placeholder="Enter 4 digit pin number"
+                    class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
+                <br>
+                <button id="transfer-money-btn" class="btn bg-[#0874f2] w-full mt-4 rounded-[32px] text-white">Send
+                    Now</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- get bonus button form  -->
+    <div id="get-bonus-parent" class="form max-w-[350px] mx-auto pb-[100px]" style="display: none;">
+        <h1 class="font-semibold text-[#080808e6] text-[18px] pt-[24px] pb-[10px]">Get Bonus</h1>
+        <form>
+            <div class="p-6 bg-white w-[350px] rounded-[24px]">
+                <label for="text" class="font-medium">Enter Bonus Coupon</label> <br>
+                <input id="get-bonus-amount" type="text" placeholder="Enter your coupon"
+                    class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
+                <br>
+                <button id="get-bonus-money-btn" class="btn bg-[#0874f2] w-full mt-4 rounded-[32px] text-white">Get
+                    Bonus</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- pay bill button form  -->
+    <div id="pay-bill-parent" class="form max-w-[350px] mx-auto pb-[100px]" style="display: none;">
+        <h1 class="font-semibold text-[#080808e6] text-[18px] pt-[24px] pb-[10px]">Pay Bill</h1>
+        <form>
+            <div class="p-6 bg-white w-[350px] rounded-[24px]">
+                <label for="" class="font-medium">Select To Pay</label>
+                <select class="select  mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none">
+                    <option selected>Select to pay</option>
+                    <option>Electricity bill </option>
+                    <option>Internet bill</option>
+                    <option>Mobile bill</option>
+                </select>
+                <label for="text" class="font-medium">Biller Account Number</label> <br>
+                <input id="biller-account-number" type="text" placeholder="Enter account number"
+                    class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
+                <br>
+                <label for="text" class="font-medium">Amount to Pay</label> <br>
+                <input id="pay-bill-amount" type="text" placeholder="Add Amount to pay"
+                    class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
+                <br>
+                <label for="password" class="font-medium">Pin Number</label> <br>
+                <input id="pay-bill-pin-number" type="password" placeholder="Enter 4 digit pin number"
+                    class="input mb-4 mt-2 rounded-[32px] bg-[#f4f5f7] border-none" />
+                <br>
+                <button id="pay-btn" class="btn bg-[#0874f2] w-full mt-4 rounded-[32px] text-white">Pay Now</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- transaction part -->
+    <div id="transaction-parent" class="form max-w-[350px] mx-auto pb-[100px]" style="display: none;">
+        <div class="flex justify-between items-center pt-[24px] pb-[10px]">
+            <h1 class="font-semibold text-[#080808e6] text-[18px] ">Transaction History</h1>
+            <p class="text-[#08080880] cursor-pointer" id="view-all">View All</p>
+        </div>
+        <div id="transaction-history">
+
+        </div>
+    </div>
+    <!-- latest payment part -->
+    <div id="latest-payment-parent" class="form max-w-[350px] mx-auto pb-[100px]">
+        <div class="flex justify-between items-center pt-[24px] pb-[10px]">
+            <h1 class="font-semibold text-[#080808e6] text-[18px] ">Latest Payment</h1>
+            <p class="text-[#08080880]">View All</p>
+        </div>
+        <div id="latest-payment">
+
+        </div>
+    </div>
+
+
 
     <!-- js add link    -->
     <script src="./home.js"></script>
